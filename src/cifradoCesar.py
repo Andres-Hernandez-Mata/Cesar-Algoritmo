@@ -11,11 +11,10 @@ import os
 os.system("cls")
 
 mensaje = input('Ingresa el mensaje: ')
-llave = 3
+llave = input('Asignar llave: ')
 modo = 'cifrar'
 simbolos = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'
 resultado = ''
-
 
 for simbolo in mensaje:
     if simbolo in simbolos:
