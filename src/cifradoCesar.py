@@ -11,4 +11,8 @@ import os
 os.system("cls")
 
 mensaje = input('Ingresa el mensaje: ')
+llave = 3
+modo = 'cifrar'
+SIMBOLOS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'
+resultado = ''
 
