@@ -1,2 +1,2 @@
-# Cifrando-Descifrando-Cesar
+# Algoritmo Criptográfico
 Cifrando y descifrando con César
