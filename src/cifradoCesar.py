@@ -1,14 +1,22 @@
 """
 Uso: Cifrado César
 Creado: Andrés Hernández Mata
-Version: 2.0.0
+Version: 2.5.0
 Python: 3.9.1
 Fecha: 19 Abril 2020
 """
 
 import os
+from colorama import Fore
+from colorama import Style
+import pyfiglet as header
+from termcolor import colored
 
 os.system("cls")
+
+banner = header.figlet_format("       CESAR").upper()
+print(colored(banner.rstrip("\n"), 'blue', attrs=['bold']))
+print(colored("By Andrés Hernández Mata | Version 2.0.0 | LSTI \n", 'red', attrs=['bold']))
 
 def cesar(modo):
     
@@ -42,7 +50,7 @@ def select():
 
     while(not correcto):
         try:
-            num = int(input("Elige una opcion: "))
+            num = int(input("Elige una opción: "))
             correcto = True
         except ValueError:
             print('Error, introduce un numero entero del menu')
@@ -64,11 +72,13 @@ while not salir:
     if opcion == 1:
         cifrar = True
         resultado = cesar(cifrar)
-        print(resultado)        
+        os.system("cls")
+        print(colored(resultado, 'red', attrs=['bold']))
     elif opcion == 2:
         cifrar = False
         resultado = cesar(cifrar)
-        print(resultado)        
+        os.system("cls")
+        print(colored(resultado, 'red', attrs=['bold']))
     elif opcion == 3:
         salir = True
     else:
