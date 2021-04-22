@@ -1,7 +1,7 @@
 """
 Uso: Cifrado César
 Creado: Andrés Hernández Mata
-Version: 2.5.0
+Version: 2.5.1
 Python: 3.9.1
 Fecha: 19 Abril 2020
 """
@@ -53,7 +53,8 @@ def select():
             num = int(input("Elige una opción: "))
             correcto = True
         except ValueError:
-            print('Error, introduce un numero entero del menu')
+            os.system("cls")
+            print(colored("Error, introduce un numero entero del menu", 'red', attrs=['bold']))            
      
     return num
  
@@ -81,7 +82,9 @@ while not salir:
         print(colored(resultado, 'red', attrs=['bold']))
     elif opcion == 3:
         salir = True
+        print(colored("Bye...", 'red', attrs=['bold']))
     else:
-        print ("Introduce un numero de las opciones 1 y 2 del menu")
+        os.system("cls")
+        print(colored("Introduce un numero de las opciones 1 a 3 del menu", 'red', attrs=['bold']))        
  
 
