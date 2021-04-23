@@ -85,6 +85,6 @@ while not salir:
         print(colored("Bye...", 'red', attrs=['bold']))
     else:
         os.system("cls")
-        print(colored("Introduce un numero de las opciones 1 hasta 3 del menu", 'red', attrs=['bold']))        
+        print(colored("Introduce una opcion valida del menu", 'red', attrs=['bold']))        
  
 
