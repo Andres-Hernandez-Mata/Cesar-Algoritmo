@@ -52,9 +52,8 @@ def select():
         try:
             num = int(input("Elige una opción: "))
             correcto = True
-        except ValueError:
-            os.system("cls")
-            print(colored("Error, introduce un numero entero del menu", 'red', attrs=['bold']))            
+        except ValueError:            
+            print(colored("Error, introduce un numero entero", 'red', attrs=['bold']))            
      
     return num
  
