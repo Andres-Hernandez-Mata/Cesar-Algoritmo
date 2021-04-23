@@ -18,7 +18,7 @@ banner = header.figlet_format("       CESAR").upper()
 print(colored(banner.rstrip("\n"), 'blue', attrs=['bold']))
 print(colored("By Andrés Hernández Mata | Versión 2.5.1 | LSTI \n", 'red', attrs=['bold']))
 
-def cesar(modo):
+def cesar(cifrar):
     
     mensaje = input('Ingresa la cadena: ')
     llave = int(input('Asignar valor a la llave: '))
