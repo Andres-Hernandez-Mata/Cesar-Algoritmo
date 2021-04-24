@@ -1,6 +1,6 @@
 """
 Uso: Cifrado César
-Creado: Andrés Hernández Mata
+Creador: Andrés Hernández Mata
 Version: 2.7.0
 Python: 3.9.1
 Fecha: 19 Abril 2020
@@ -19,10 +19,10 @@ print(colored(banner.rstrip("\n"), 'blue', attrs=['bold']))
 print(colored("By Andrés Hernández Mata | Versión 2.7.0 | LSTI \n", 'red', attrs=['bold']))
 
 def cesar(cifrar):
-    
+
     while True:
         try:
-            mensaje = input('Ingresa la cadena: ')              
+            mensaje = input('Ingresa la cadena: ')
             llave = int(input('Asignar valor a la llave: '))
             if mensaje != '':
                 break
@@ -37,25 +37,25 @@ def cesar(cifrar):
         for simbolo in mensaje:
             if simbolo in simbolos:
                 indice_simbolo = simbolos.find(simbolo)
-                if cifrar:                
+                if cifrar:
                     indice_nuevo = indice_simbolo + llave
-                elif not cifrar:                
+                elif not cifrar:
                     indice_nuevo = indice_simbolo - llave
-                
+
                 if indice_nuevo >= len(simbolos):
                     indice_nuevo = indice_nuevo - len(simbolos)
                 elif indice_nuevo < 0:
-                    indice_nuevo = indice_nuevo + len(simbolos)        
-                resultado = resultado + simbolos[indice_nuevo]    
+                    indice_nuevo = indice_nuevo + len(simbolos)
+                resultado = resultado + simbolos[indice_nuevo]
             else:
                 resultado = resultado + simbolo
     except Exception as error:
         print(colored(error, 'red', attrs=['bold']))
-    
+
     return resultado
 
 def select():
- 
+
     correcto = False
     num = 0
 
@@ -63,22 +63,22 @@ def select():
         try:
             num = int(input("Elige una opción: "))
             correcto = True
-        except Exception:            
+        except Exception:
             print(colored("Error, introduce un numero entero", 'red', attrs=['bold']))
-     
+
     return num
- 
+
 salir = False
 opcion = 0
 
-try: 
-    while not salir:    
+try:
+    while not salir:
         print ("1. Cifrar")
         print ("2. Decifrar")
-        print ("3. Salir")    
+        print ("3. Salir")
         opcion = select()
         cifrar = bool()
-    
+
         if opcion == 1:
             cifrar = True
             resultado = cesar(cifrar)
@@ -94,6 +94,6 @@ try:
             print(colored("Bye...", 'red', attrs=['bold']))
         else:
             os.system("cls")
-            print(colored("Introduce una opcion valida del menu", 'red', attrs=['bold']))        
+            print(colored("Introduce una opcion valida del menu", 'red', attrs=['bold']))
 except Exception as error:
     print(colored(error, 'red', attrs=['bold']))
