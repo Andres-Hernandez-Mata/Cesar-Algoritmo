@@ -31,21 +31,25 @@ def cesar(cifrar):
     simbolos = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'
     resultado = ''
 
-    for simbolo in mensaje:
-        if simbolo in simbolos:
-            indice_simbolo = simbolos.find(simbolo)
-            if cifrar:                
-                indice_nuevo = indice_simbolo + llave
-            elif not cifrar:                
-                indice_nuevo = indice_simbolo - llave
-            
-            if indice_nuevo >= len(simbolos):
-                indice_nuevo = indice_nuevo - len(simbolos)
-            elif indice_nuevo < 0:
-                indice_nuevo = indice_nuevo + len(simbolos)        
-            resultado = resultado + simbolos[indice_nuevo]    
-        else:
-            resultado = resultado + simbolo
+    try:
+        for simbolo in mensaje:
+            if simbolo in simbolos:
+                indice_simbolo = simbolos.find(simbolo)
+                if cifrar:                
+                    indice_nuevo = indice_simbolo + llave
+                elif not cifrar:                
+                    indice_nuevo = indice_simbolo - llave
+                
+                if indice_nuevo >= len(simbolos):
+                    indice_nuevo = indice_nuevo - len(simbolos)
+                elif indice_nuevo < 0:
+                    indice_nuevo = indice_nuevo + len(simbolos)        
+                resultado = resultado + simbolos[indice_nuevo]    
+            else:
+                resultado = resultado + simbolo
+    except Exception as error:
+        print(colored(error, 'red', attrs=['bold']))
+    
     return resultado
 
 def select():
