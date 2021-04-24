@@ -22,9 +22,11 @@ def cesar(cifrar):
     
     while True:
         try:
-            mensaje = input('Ingresa la cadena: ')  
+            mensaje = input('Ingresa la cadena: ')              
             llave = int(input('Asignar valor a la llave: '))
-            break
+            if mensaje != '':
+                break
+            print(colored("La cadena es un campo obligatorio", 'red', attrs=['bold']))
         except Exception:
             print(colored("Error, por favor ingresa los valores solicitados correctamente", 'red', attrs=['bold']))
 
